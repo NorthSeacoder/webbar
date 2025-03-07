@@ -1,7 +1,5 @@
 # WebBar - 从状态栏快速访问网页
 
-![WebBar 图标](webbar-icon.svg)
-
 **WebBar** 是一款轻量且直观的 VS Code 扩展，允许您在状态栏中添加可自定义的按钮，以便一键访问您常用的网页。
 
 [查看英文版 README (English README)](README.md)
