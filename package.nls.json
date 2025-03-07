@@ -1,0 +1,12 @@
+{
+  "webbar.description": "Add customizable web links to VS Code status bar",
+  "webbar.configuration.title": "WebBar",
+  "webbar.webBarButtons.description": "List of buttons to display in the status bar",
+  "webbar.webBarButtons.id.description": "Unique identifier for the button",
+  "webbar.webBarButtons.icon.description": "VS Code built-in icon, supports: $(globe), $(git-branch), $(book), $(link), $(link-external), $(browser), $(heart), $(star), $(repo), $(home), etc.",
+  "webbar.webBarButtons.text.description": "Button display text",
+  "webbar.webBarButtons.priority.description": "Button sorting priority (higher value = closer to the edge)",
+  "webbar.webBarButtons.alignment.description": "Button alignment: left or right",
+  "webbar.webBarButtons.tooltip.description": "Tooltip information displayed on mouse hover (optional)",
+  "webbar.webBarButtons.url.description": "Web address to open when button is clicked"
+}

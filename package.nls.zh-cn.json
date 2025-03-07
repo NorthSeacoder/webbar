@@ -1,0 +1,12 @@
+{
+  "webbar.description": "在VS Code状态栏添加可自定义的网页链接",
+  "webbar.configuration.title": "网页栏",
+  "webbar.webBarButtons.description": "在状态栏中显示的按钮列表",
+  "webbar.webBarButtons.id.description": "按钮的唯一标识符",
+  "webbar.webBarButtons.icon.description": "VS Code内置图标，支持：$(globe)、$(git-branch)、$(book)、$(link)、$(link-external)、$(browser)、$(heart)、$(star)、$(repo)、$(home)等",
+  "webbar.webBarButtons.text.description": "按钮显示的文本",
+  "webbar.webBarButtons.priority.description": "按钮排序优先级（数值越高越靠前）",
+  "webbar.webBarButtons.alignment.description": "按钮对齐方式：左对齐或右对齐",
+  "webbar.webBarButtons.tooltip.description": "鼠标悬停时显示的提示信息（可选）",
+  "webbar.webBarButtons.url.description": "点击按钮后打开的网页地址"
+}

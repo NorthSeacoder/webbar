@@ -1,4 +1,6 @@
-import { useLogger } from 'reactive-vscode'
+import { useLogger,getDefaultLoggerPrefix } from 'reactive-vscode'
 import { displayName } from './generated/meta'
 
-export const logger = useLogger(displayName)
+export const logger = useLogger(displayName, {
+    getPrefix: getDefaultLoggerPrefix,
+  })
