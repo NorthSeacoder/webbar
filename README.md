@@ -44,25 +44,25 @@ Add your buttons by editing the `webBar.webBarButtons` setting in your VS Code c
 
 ```json
 {
-    "webBar.webBarButtons": [
-        {
-            "id": "google",
-            "icon": "$(globe)",
-            "text": "Google",
-            "priority": 1,
-            "alignment": "right",
-            "tooltip": "Search on Google",
-            "url": "https://www.google.com"
-        },
-        {
-            "id": "github",
-            "icon": "$(git-branch)",
-            "text": "GitHub",
-            "priority": 2,
-            "alignment": "left",
-            "url": "https://github.com"
-        }
-    ]
+  "webBar.webBarButtons": [
+    {
+      "id": "google",
+      "icon": "$(globe)",
+      "text": "Google",
+      "priority": 1,
+      "alignment": "right",
+      "tooltip": "Search on Google",
+      "url": "https://www.google.com"
+    },
+    {
+      "id": "github",
+      "icon": "$(git-branch)",
+      "text": "GitHub",
+      "priority": 2,
+      "alignment": "left",
+      "url": "https://github.com"
+    }
+  ]
 }
 ```
 

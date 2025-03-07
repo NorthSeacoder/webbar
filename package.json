@@ -24,9 +24,9 @@
   "files": [
     "LICENSE.md",
     "dist/*",
-    "res/*",
     "package.nls.json",
-    "package.nls.zh-cn.json"
+    "package.nls.zh-cn.json",
+    "res/*"
   ],
   "engines": {
     "vscode": "^1.97.0"

@@ -1,6 +1,7 @@
-import { computed, watchEffect, ref } from '@reactive-vscode/reactivity'
+import type { ConfigurationChangeEvent } from 'vscode'
+import { computed, ref, watchEffect } from '@reactive-vscode/reactivity'
 import { useCommand, useStatusBarItem } from 'reactive-vscode'
-import { Disposable, StatusBarAlignment, Uri, workspace, env, ConfigurationChangeEvent } from 'vscode'
+import { Disposable, env, StatusBarAlignment, Uri, workspace } from 'vscode'
 import { logger } from './utils'
 
 interface ButtonConfig {
@@ -19,7 +20,7 @@ export function activate() {
 
   // 创建一个响应式引用来存储配置
   const configRef = ref<ButtonConfig[]>([])
-  
+
   // 更新配置的函数
   const updateConfig = () => {
     const config = workspace.getConfiguration('webBar').get<ButtonConfig[]>('webBarButtons', [])
@@ -54,19 +55,19 @@ export function activate() {
 
     // 创建状态栏按钮
     buttons.forEach((btn) => {
-      const alignment =
-        btn.alignment === 'left' ? StatusBarAlignment.Left : StatusBarAlignment.Right
-      
+      const alignment
+        = btn.alignment === 'left' ? StatusBarAlignment.Left : StatusBarAlignment.Right
+
       // 确保至少有icon或text其中之一
-      const displayText = btn.icon && btn.text 
-        ? `${btn.icon} ${btn.text}` 
+      const displayText = btn.icon && btn.text
+        ? `${btn.icon} ${btn.text}`
         : btn.icon || btn.text || ''
-      
+
       if (!displayText) {
         logger.warn(`按钮 ${btn.id} 缺少显示文本或图标，将被跳过`)
         return
       }
-      
+
       logger.info(`创建状态栏按钮: ${btn.id}, 显示为: ${displayText}`)
       const statusBarItem = useStatusBarItem({
         id: btn.id,
@@ -85,11 +86,11 @@ export function activate() {
     })
 
     logger.info(`共创建 ${statusBarItems.length} 个状态栏按钮`)
-    
+
     // 清理函数：销毁旧状态栏项
     return () => {
       logger.info('清理状态栏按钮')
-      statusBarItems.forEach((item) => item.dispose())
+      statusBarItems.forEach(item => item.dispose())
     }
   })
 
